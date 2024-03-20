@@ -17,18 +17,25 @@ public class User {
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private long id;
+
     @NotBlank
     private String firstName;
+
     @NotBlank
     private String lastName;
+
     @NotBlank
     private String patronymic;
+
     @Email
     private String email;
+
     @NotBlank
     private int age;
+
     @NotBlank
     private String city;
+
     @CreatedDate
     private LocalDate createdAt;
 

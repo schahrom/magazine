@@ -16,22 +16,30 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 @Setter
 @Getter
 public class UserDTO {
+
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private long id;
+
     @NotBlank
     private String firstName;
+
     @NotBlank
     private String lastName;
+
     @NotBlank
     private String patronymic;
+
     @Email
     @Column(unique = true)
     private String email;
+
     @NotBlank
     private int age;
+
     @NotBlank
     private String city;
+
     @CreatedDate
     private LocalDate createdAt;
 }
